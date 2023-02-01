@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/css/chat.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Chat</h1>
+    </header>
+        <section class="username">
+            <label for="username">Chose your username</label>
+            <input type="text" name="username" id="username">
+        </section>
+        <section class="chatroom">
+            <section class="feedback"></section>
+        </section>
+        <section class="input_zone">
+            <input type="text" name="chat" id="chat" placeholder="Type a message...">
+            <button class="send_message" type="button">Send</button>
+        </section>
+       <script src="chat.js"></script>
+</body>
+</html>

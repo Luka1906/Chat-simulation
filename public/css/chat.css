@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+body {
+    height: 100vh;
+    overflow-y: hidden;
+    padding: 0.5em;
+}
+
+header{
+    text-align: center;
+    margin-top: 0.5em;
+    height: 5vh;
+    margin-bottom: 1em;
+}
+
+ section.chatroom {
+    border:5px inset rgb(199, 199, 39);
+    overflow: auto;
+    height: 78vh;
+    margin-top: 1em;
+ }
+ section.input_zone {
+    border: 2px inset rgb(191, 191, 168);
+    display: flex;
+    align-items: center;
+
+   
+ }
+ #username {
+    outline: none;
+ }
+ 
+ #chat {
+    width: 92%;
+    height: 6vh;
+    border: hidden;
+    padding-left: 0.5em;
+    outline: none;
+
+ }
+
+ button {
+    padding: 0.2em;
+    width: 7%;
+    cursor: pointer;
+    color: rgb(191, 191, 168); ;
+    background: rgb(10, 10, 10);
+    border: 2px solid rgb(191, 191, 168);
+    border-radius: 3px;
+ }
+
+
