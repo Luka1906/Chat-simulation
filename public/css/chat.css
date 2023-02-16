@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,52 +6,215 @@
     font-family: 'Lato';
 }
 body {
-    height: 100vh;
     overflow-y: hidden;
-    padding: 0.5em;
+    overflow-x: hidden;
+
 }
 
-header{
-    text-align: center;
-    margin-top: 0.5em;
-    height: 5vh;
-    margin-bottom: 1em;
+
+main#user-chat {
+   width: 100vw;
+   height: 100vh;
+   background: #262626;
+   display:grid;
+   grid-template-areas: "login_status head head head head "
+                        "login_status chatroom chatroom chatroom chatroom "
+                        "login_status chatroom chatroom chatroom chatroom"
+                        "login_status chatroom chatroom chatroom chatroom"; 
+
 }
 
- section.chatroom {
-    border:5px inset rgb(199, 199, 39);
-    overflow: auto;
-    height: 78vh;
-    margin-top: 1em;
- }
- section.input_zone {
-    border: 2px inset rgb(191, 191, 168);
-    display: flex;
-    align-items: center;
+.head {
+   grid-area: head;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: center;
+   margin-right: 2em;
+   gap: 0.5em
+}
+
+.logout-link {
+   text-decoration: none;
+   color: #fff;
+   font-size: 1em;
+}
+
+
+section#login_status {
+   width: 10vw;
+   grid-area: login_status;
+   border-right: 0.5px solid rgb(176, 175, 175);
+   background-image: radial-gradient( circle farthest-corner at 16.5% 28.1%,  rgba(15,27,49,1) 0%, rgba(0,112,218,1) 90% );
+   padding: 0.5em;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: #fff
+  
+}
+
+
+h1#chats {
+   margin-top: 0.3em;
+
+}
+.central {
+   display: flex;
+   width: 90vw;
+   justify-content: center;
+   align-items: center;
+
+}
+.chat-area {
+   grid-area: chatroom;
+   max-width: 650px;
+   height:550px;
+   background-color: #0093E9;
+   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+   
+   border-radius: 1.5em;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 80px;
+}
+
+ section#chatroom {
+   overflow: auto;
+    width: 600px;
+    height: 350px;
+ 
 
    
+   
  }
- #username {
-    outline: none;
- }
+ div#input {
+   width: 90vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1000;
+   
+
+
+}
+ section.input_zone {
+    width: 540px;
+    margin-top: 0.5em;
+    background-color: #f0efef;
+   
+    border: 1px solid rgb(194, 190, 190);
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    padding: 0.3em;
+    word-wrap: break-word;
  
+ }
+ #feedback {
+   width: 490px;
+  
+ }
+
  #chat {
-    width: 92%;
-    height: 6vh;
-    border: hidden;
+    inline-size: 400px;
+    overflow-wrap: break-word;
+    background:local;
+    height: 35px;
+    border: none;
     padding-left: 0.5em;
     outline: none;
 
  }
 
  button {
-    padding: 0.2em;
-    width: 7%;
+    margin-left: 3em;
     cursor: pointer;
-    color: rgb(191, 191, 168); ;
-    background: rgb(10, 10, 10);
-    border: 2px solid rgb(191, 191, 168);
+    color: #000;
+    background: none;
     border-radius: 3px;
+    border: none;
+    display: none;
+ }
+ .paper-plane {
+   font-size:1.4em ;
+   color:#006AFF;
+   position: relative;
+   left: 50px;
+ }
+ 
+ #message {
+   font-size: 0.9em;
+   margin-left: 3em;
+   margin-top: 0.7em;
+   margin-bottom: 2.5em;
+   border-radius: 5px;
+   inline-size: 170px;
+   word-wrap: break-word;
+   padding: 0.5em;
+   background-color: #006AFF;
+   color: #fff;
+ }
+ #message:nth-child(2n) {
+    margin-left: 1em;
+    background-color: #ccc;
+    color: #000;
+
  }
 
+ #connecting_message {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+
+
+ }
+ 
+ 
+ .time {
+   font-size: 0.8em;
+}
+
+
+
+.header {
+   border-bottom: 0.5px solid rgb(107, 107, 107);
+   width: 100%;
+   text-align: center;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+
+   
+}
+.user-name {
+   font-size: 1.1em;
+ }
+#online {
+   font-size: 0.9em;
+   font-weight: 700;
+   color: #4BB543;
+}
+#ofline {
+   color: #ff3333;
+}
+
+
+   /* .nickname {
+   font-size: 1.1em;
+   font-weight: 900;
+   margin-top: 1em;
+ } */
+ 
+.pic {
+   height: 50px;
+   width: 50px;
+   background: #fff;
+   border-radius: 90px;
+   padding: 5px;
+   margin-top: 1em;
+};
 

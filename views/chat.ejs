@@ -4,25 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat</title>
+    <title><%= title %></title>
     <link rel="stylesheet" href="/css/chat.css">
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+    <script
+    src="https://kit.fontawesome.com/f89874f3cd.js"
+  ></script>
 </head>
 <body>
-    <header>
-        <h1>Chat</h1>
-    </header>
-        <section class="username">
-            <label for="username">Chose your username</label>
-            <input type="text" name="username" id="username">
+    <main id="user-chat">    
+    <div class="head">
+        <div class="profile-image"></div>
+        <div class="logout">
+            <a class="logout-link" href="/"><p>Logout</p></a>
+        </div>
+    </div>
+    <div class="central">
+    <div class="chat-area">
+        <div class="header">
+            <div class="image"></div>
+            <div id="username"></div>   
+            </div>
+        <section id="chatroom">
         </section>
-        <section class="chatroom">
-            <section class="feedback"></section>
+        <section id="connecting_message" ></section>
+        <section id="disconnecting_message" ></section>
+        <section id="feedback"></section>
+        <div id="input">
+            <section class="input_zone">
+                <input type="text" name="chat" id="chat" placeholder="Type a message..." value="">
+               
+                <button id="chat-btn" class="send_message" type="button"><i class="fa fa-paper-plane paper-plane"></i></button>
+            </section>
+        </div>
+    </div>
+</div> 
+        
+        <section id="login_status">
+            <div class="top">
+                <h1 id="chats">Chats</h1>   
+            </div>
+            <div class="image"></div>
+            <div id="status"></div>
+          
+           
         </section>
-        <section class="input_zone">
-            <input type="text" name="chat" id="chat" placeholder="Type a message...">
-            <button class="send_message" type="button">Send</button>
-        </section>
-       <script src="chat.js"></script>
+    </div>
+   
+    </main>
+     <script src="chatClient.js"></script>
 </body>
 </html>
