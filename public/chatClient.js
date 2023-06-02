@@ -58,7 +58,7 @@ socket.on(`received_message`, (data) => {
   let Time = hours + ":" + minutes + " " + AmOrPm; 
     const chatRoom = document.getElementById('chatroom');
     chatRoom.innerHTML+= (`<div id="message"><p class="time">${Time}</p>
-     <span class="nickname">${data.author}</span>&nbsp<span>${data.message}</span></div>`);
+     <span id="nickname">${data.author}:</span>&nbsp<span>${data.message}</span></div>`);
   
      if (chatRoom) {
 chatRoom.scrollTop = chatRoom.scrollHeight - chatRoom.clientHeight;
@@ -135,9 +135,8 @@ socket.on(`typing`, (user) => {
 } );
 
 socket.on(`disconnect_response`, (user) => {
-  document.getElementById(`online`).innerHTML =`<p id="ofline">Ofline</p>`;
+  document.getElementById(`online`).innerHTML =`<p id="ofline">Offline</p>`;
   document.getElementById(`disconnecting_message`).innerHTML =`<p>${user} just left the chat!</p>`;
-  // document.getElementById(`connecting_message`).innerHTML = ``;
   document.getElementById("feedback").innerHTML = "";
 
 
