@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+    <script
+    src="https://kit.fontawesome.com/f89874f3cd.js"
+  ></script>
+</head>
+<body>
+    <main>
+        <h2 class="header">JOIN CHAT</h2>
+        <form class="login" action="/" method="post">
+        <div class="username-login">
+            <i class="fa fa-user user-icon"></i>
+            <input type="text" name="name" id="name"  placeholder="Username">
+    </div>
+    <% if(locals.error) { %>
+        <div class="error-message" role="alert"><%= error %></div>
+        <% } %>
+    <div class="chatRoom-number">
+        <input type="text" name="chatRoom" id="chatRoom" placeholder="Chatroom name">
+        <i class="fa fa-comment chat-icon"></i>
+    </div>
+    <div class="profile-pic">
+        <p class="prof-pic">Choose your profile picture</p>
+        <% for (let image of images) { %>
+           <img class="images" src="/<%=image%>" alt="<%=image%>">
+            <% } %>
+            <input hidden id="img-input" value="" name="image">
+    </div>
+    <% if(locals.err_msg) { %>
+        <div class="error-message" role="alert"><%= err_msg %></div>
+        <% } %>
+    <button id="btn" type="submit">LOGIN</button>
+</form>
+</main>
+<script src="loginClient.js"></script>
+</body>
+</html>
+

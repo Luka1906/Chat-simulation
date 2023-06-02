@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+}
+
+
+main#user-chat {
+   display: flex;
+   background: #262626;
+   justify-content: space-between;
+   overflow: hidden;
+     
+}
+
+.central {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  
+ }
+
+ .pic {
+   height: 50px;
+   width: 50px;
+   background: #fff;
+   border-radius: 90px;
+   padding: 5px;
+   margin-top: 1em;
+  
+ }
+
+ .profile-image {
+  position: absolute;
+  right: 2rem;
+  top: 0;
+ }
+ 
+
+
+.logout-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  position: absolute;
+  right: 2rem;
+  top: 4.5rem;
+  
+}
+
+.logout-link:hover {
+  text-decoration: underline;
+}
+
+section#login_status {
+  height: 100vh;
+  border-right: 0.5px solid rgb(176, 175, 175);
+  background-image: radial-gradient(
+    circle farthest-corner at 16.5% 28.1%,
+    rgba(15, 27, 49, 1) 0%,
+    rgba(0, 112, 218, 1) 90%
+  );
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  
+}
+
+h1#chats {
+  margin-top: 0.3em;
+}
+
+.chat-area {
+  grid-area: chatroom;
+  width: 40rem;
+  min-width: 15rem;
+  height: 550px;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  border-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+section#chatroom {
+  overflow: auto;
+  width: 600px;
+  height: 350px;
+}
+div#input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+section.input_zone {
+  width: 540px;
+  margin-top: 0.5em;
+  background-color: #f0efef;
+  border: 1px solid rgb(194, 190, 190);
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  padding: 0.3em;
+  word-wrap: break-word;
+}
+#feedback {
+  width: 490px;
+
+}
+
+#chat {
+  inline-size: 400px;
+  overflow-wrap: break-word;
+  background: local;
+  height: 35px;
+  border: none;
+  padding-left: 0.5em;
+  outline: none;
+}
+
+button {
+  margin-left: 3em;
+  cursor: pointer;
+  color: #000;
+  background: none;
+  border-radius: 3px;
+  border: none;
+  display: none;
+}
+.paper-plane {
+  font-size: 1.4em;
+  color: #006aff;
+  position: relative;
+  left: 50px;
+}
+
+#message { 
+  font-size: 0.9em;
+  margin-left: 3em;
+  margin-top: 0.7em;
+  margin-bottom: 2.5em;
+  border-radius: 5px;
+  inline-size: 170px;
+  word-wrap: break-word;
+  padding: 0.5em;
+  background-color: #006aff;
+  color: #fff;
+}
+#message:nth-child(2n) {
+  margin-left: 1em;
+  background-color: #ccc;
+  color: #000;
+}
+
+#connecting_message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.time {
+  font-size: 0.8em;
+}
+
+.header {
+  border-bottom: 0.5px solid rgb(107, 107, 107);
+  width: 100%;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.user-name {
+  font-size: 1.1em;
+}
+#online {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #4bb543;
+}
+#ofline {
+  color: #ff3333;
+}
+
+
+@media (max-width: 480px) {
+  .chat-area {
+    width: 15rem;
+    height: 450px;
+    margin-top: 4rem;
+   
+ }
+ section.input_zone {
+  width: 220px;
+  position: relative;
+  bottom: 1.5rem;
+}
+
+#message { 
+  position: relative;
+  left: 3.5rem;
+  transform: scale(0.8);
+  margin-bottom: 1.2rem;
+ 
+
+}
+#message:nth-child(2n) {
+  position: relative;
+  left: 4rem;
+  
+}
+section#login_status {
+  width: 4.3rem;
+
+}
+#feedback {
+  position: relative;
+  left: 4rem;
+  bottom: 0;
+    
+  }
+
+#connecting_message {
+  position: relative;
+  font-size: 0.9rem;
+  padding: 0 1rem;
+  
+}
+
+
+}
+@media (max-width:576px)  {
+  .chat-area {
+    max-width: 25rem;
+    height: 30rem;
+   
+ }
+
+ section#login_status {
+  font-size: 0.75rem;
+
+}
+.pic {
+  height: 38px;
+  width: 38px;
+  background: #fff;
+  border-radius: 90px;
+  padding: 5px;
+  margin-top: 1em;
+  }
+  .logout-link {
+   
+    right: 2.15rem;
+    top: 3.75rem;
+    font-size: 0.75rem;
+    
+  }
+
+  .profile-image {
+    right: 2.15rem;
+  }
+
+  .user-name {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media  (max-width:768px) {
+  
+   .chat-area {
+    max-width: 25rem;
+   }
+   section.input_zone {
+      max-width: 350px;
+      position: relative;
+      bottom: 1.5rem;
+    
+   }
+   .paper-plane {
+      position: relative;
+      left: -12px
+     
+   }
+   #message { 
+    margin-left: 10em;
+   
+  
+  }
+  #message:nth-child(2n) {
+    margin-left: 8em;
+    
+  }
+ 
+  #feedback {
+   margin-left: 9rem;
+   margin-bottom: 1.5rem;
+    
+  }
+  
+
+}
